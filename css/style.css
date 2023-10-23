@@ -1,0 +1,409 @@
+/*  1- GERERAL STYLES
+    2- SECTIONS  
+      2.1  HEADER
+      2.2 HOME SECTION 
+      2.3 CATOGRY SECTION 
+      2.4 MARKTING
+      2.5 SERIVES
+      2.6 FOOTER SECTION
+ */
+/* 1.general styles ///////////////////////////////////////////////*/
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+body{
+    background-color:rgb(247, 246, 246);
+    font-family: "pt-sans",sans-serif;
+    text-transform: capitalize;
+    color: rgb(77, 76, 76);
+}
+.title{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+}
+.line{
+    width: 100px;
+    height: 2px;
+    background-color:#cc9e7b;
+    margin: 15px auto;
+    transition: 1s;
+}
+.header:hover .line{
+    transform: scale(1.8,1);
+}
+/* 2.sections ////////////////////////////////////////////////////////////////// */
+/* 2.1 Header////////////////////////////////////////////////////////////// */
+.clear{
+    clear: both;
+}
+.nav-bar{
+    width: 100%;
+    height: 85px;
+    background-color:rgb(247, 246, 246);
+}
+.nav-bar .logo img{
+    margin-left:-10px ;
+}
+.container .nav-bar .logo{
+    float: left;
+}
+.container .nav-bar nav .nav1{
+    text-align: left;
+    list-style-type: none; 
+}
+.container .nav-bar nav .nav1 li{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 24px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.container .nav-bar nav .nav1 li a i{
+    font-size: 25px;
+    position: relative;
+}
+.container .nav-bar nav .nav1 li a i .zero{
+    font-size: 20px;
+    background-color: #d8ae8d;
+    width: 16px;
+    height: 22px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top:10px ;
+}
+.container .nav-bar nav .nav1 li a i .word{
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+}
+.container .nav-bar nav .nav1 > li > a{
+    text-decoration: none;
+    color:dimgray;
+    position: relative;
+}
+.container .nav-bar nav .nav1 > li > .anav1::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height:0;
+    left: 0;
+    top: 0;
+    transition:border 0.1s; 
+}
+.container .nav-bar nav .nav1 > li > .anav1:hover::before{ 
+    height: 100%;
+    width: 100%; 
+    border-right: 2px solid dimgray; 
+    padding: 11px;
+    margin: -13px;  
+}
+.container .nav-bar nav .nav1 > li > .anav1::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition:0.3s;
+    padding: 10px ;
+    margin: -13px;   
+}
+.container .nav-bar nav .nav1 > li > .anav1:hover::after{ 
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid dimgray; 
+    border-top: 2px solid dimgray; 
+    border-bottom: 2px solid dimgray;
+}
+.container .nav-bar nav .nav1{
+    position: relative;
+}
+.mega-box{
+    width: 550px;
+    font-size: 20px;
+    font-weight: 200;
+    position:absolute;
+    top: 65px;
+    left: 120px;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+.nav1 li:hover .mega-box{
+    visibility: visible;
+    opacity: 1;
+}
+.mega-box-conent{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 200;
+    background-color: whitesmoke;
+    border: 2px solid dimgray;
+    position: absolute;
+    z-index: 2; 
+}  
+.mega-box-conent1{
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    padding:10px 0;
+}
+.mega-box-conent1 p{
+    font-size: 15px;
+    font-weight: 200;
+    width: 100px;
+    border-bottom: 1px dotted dimgray;
+    line-height: 30px;
+}
+.mega-box-links li a{
+    font-size: 15px;
+    font-weight: 200;
+    text-decoration: none;
+    color: dimgrey;
+    margin-left: -17px;
+}
+/* 2.2 Home //////////////////////////////////////////////////////////////// */
+.home{
+    height: 520px;
+    background-image: url(../images/Site\ Officiel\ En\ Ligne\ Le\ Creuset\ France23.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content:flex-start ;
+    align-items: center;
+}
+.home-content{
+    transform: translateX(60px); 
+    padding-top: 30px;
+} 
+.home-content h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(77, 76, 76); 
+}
+.home-content .btn{
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid dimgrey;
+    box-shadow: 2px 2px 4px 1px gray;
+    border-radius: 10px;
+    margin-top: 45px;
+    color: dimgrey;
+    background-color:#d8ae8d;
+}
+/* 2.3 Catogry ////////////////////////////////////////////////////////////// */
+.catogroy-content{
+    display: flex;
+    /* flex-flow: row wrap; */
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.catogroy-item{
+    margin-top:10px;  
+    position: relative;
+}
+.catogroy-content .catogroy-item p{
+    margin-top: 25px;  
+}
+.catogroy-content .catogroy-item span{
+    font-size:20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.catogroy-item i{
+    padding: 8px;
+    background-color:#d8ae8d;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    visibility: hidden;
+    transition: 0.1s;
+}
+.catogroy-item:hover i{
+    visibility: visible;
+}
+/* 2.4 marketing   //////////////////////////////////////////////////////////////////////*/
+.marketing{
+    display:grid;
+    grid-template-columns:50% 23% 23%;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.marketing-item{
+    height: 300px; 
+    background-color:rgb(253, 245, 234);
+    position: relative;
+    padding: 9px;
+}
+.marketing-item h2{
+    font-size: 23px;
+    position: absolute;
+    top: 30px;
+    left: 85px;
+}
+.marketing-item .p-marketing{
+    font-size: 18px;
+    font-weight: 100;
+}
+.marketing-item > p{
+    margin-left: 18px;
+    line-height: 30px;
+}
+.marketing-item .line1 li{
+    list-style-type: none;
+    float: right;
+    width: 50px;
+    height: 2px;
+    margin-left: 20px;
+    margin-top: 60px;
+    background-color:dimgray;  
+}
+.mi2{
+    background-image: url(../images/Crate\ &\ Barrel\ Whips\ Up\ a\ Collection\ of\ Top-Grade\ Cookware\ and\ Kitchen\ Essentials.jpeg);
+    background-size: cover;
+}
+.mi3{
+    background-image: url(../images/A\ Easy-To-Use\ Cooker\ For\ Just\ Anything🍟.jpeg);
+    background-size: cover;
+    /* background-position: center; */
+}
+.mi2 , .mi3{
+    transition: 0.5s;
+}
+.mi2:hover , .mi3:hover{
+    transform: scale(1.09 ,1.09);
+}
+.marketing-item .marketing-item-p{
+    font-size: 18px;
+    font-weight:200;
+    color: #d8ae8d;
+}
+.marketing-item > span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    padding-left: 14px;
+}
+/* 2.5 servies ///////////////////////////////////////////////////////////////////////////// */
+.servies{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-between; 
+}
+.servies-item{
+    text-align: center;
+    border-right: 0.8px solid dimgray;
+    margin-bottom: 50px; 
+    padding-right: 35px;
+}
+.si{
+    border: none;
+}
+.servies-item .front{
+    overflow: hidden;
+}
+.servies-item:hover .front img{
+    transform: translateY(-60px) ;
+    transition:transform 0.3s ; 
+    filter:drop-shadow(0px 60px 0 #c09778);
+}
+.servies .servies-item h2{
+    font-size: 16px;
+    line-height: 25px;
+}
+.servies .servies-item p{
+    font-size: 16px;
+    color: grey;
+}
+/* 2.6 footer //////////////////////////////////////////////////////////////////////////////// */
+.header .words{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}  
+.header .words li{
+    margin-left: 30px;
+}
+.products-content{
+    margin-top: 50px ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-between;
+}
+.products-item >i{
+    color: goldenrod;
+    margin-top: 12px;
+}
+.products-item p{
+   line-height: 30px;
+}
+.products-item h3{
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+.products-img{
+    position: relative;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: rotateY(90deg);  
+}
+.products-item:hover .overlay{
+    visibility: visible;
+    opacity: 0.7;
+    transform: rotateY(0deg);
+}
+.products-item .products-img .overlay .overlay-info .overlay-icons{
+    font-size: 30px;
+    list-style-type: none;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50% ,-50%); 
+}
+.products-item .products-img .overlay .overlay-info .overlay-icons a i{
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color:#916543;
+    padding: 3px;
+} 
+/* /////////////////////////////////////////////////// */
+@media(max-width:567px){
+    .home{
+        flex-direction: column;
+    }
+    .catogroy-content{
+        flex-direction: column;
+    }
+    .servies{
+        flex-direction: column;
+    }
+    .products-content{
+        flex-direction: column;
+    }
+   
+}
